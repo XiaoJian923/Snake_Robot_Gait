@@ -1,0 +1,31 @@
+name: mujoco
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2024.12.31=haa95532_0
+  - openssl=3.0.15=h827c3e9_0
+  - pip=24.2=py39haa95532_0
+  - python=3.9.21=h8205438_1
+  - setuptools=75.1.0=py39haa95532_0
+  - sqlite=3.45.3=h2bbff1b_0
+  - tzdata=2024b=h04d1e81_0
+  - vc=14.40=haa95532_2
+  - vs2015_runtime=14.42.34433=h9531ae6_2
+  - wheel=0.44.0=py39haa95532_0
+  - pip:
+      - absl-py==2.1.0
+      - cloudpickle==3.1.1
+      - etils==1.5.2
+      - farama-notifications==0.0.4
+      - fsspec==2024.12.0
+      - glfw==2.8.0
+      - gymnasium==1.0.0
+      - importlib-metadata==8.6.1
+      - importlib-resources==6.5.2
+      - mujoco==3.2.7
+      - numpy==2.0.2
+      - pyopengl==3.1.9
+      - scipy==1.13.1
+      - typing-extensions==4.12.2
+      - zipp==3.21.0
+prefix: D:\software\Anaconda\envs\mujoco

@@ -90,7 +90,7 @@ time_sleep = 0.01   # 每epoch睡眠时间
 epochs = 800        # 循环次数
 steps = 350         # step次数
 
-m = mujoco.MjModel.from_xml_path('Snake_Robot_o30.xml')
+m = mujoco.MjModel.from_xml_path('../mujoco_model/Snake_Robot_o30.xml')
 d = mujoco.MjData(m)
 data_ctrl = np.zeros(N)
 
