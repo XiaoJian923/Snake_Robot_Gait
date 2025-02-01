@@ -2,7 +2,7 @@
 说明：MuJoCo仿真实现履带步态。存在很多细节待完善
 参考文献：2016 Gait design of a snake robot by connecting simple shapes
 MuJoCo模型参考：https://github.com/VanguardDream/snake_RL
-作者：肖剑
+作者：肖剑0923
 时间：20250129
 '''
 import math
@@ -90,7 +90,7 @@ time_sleep = 0.01   # 每epoch睡眠时间
 epochs = 800        # 循环次数
 steps = 350         # step次数
 
-m = mujoco.MjModel.from_xml_path('XJ30.xml')
+m = mujoco.MjModel.from_xml_path('Snake_Robot_o30.xml')
 d = mujoco.MjData(m)
 data_ctrl = np.zeros(N)
 
