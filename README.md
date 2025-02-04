@@ -14,3 +14,9 @@ Includes MuJoCo models, references, bilingual code files in Chinese and English,
 |  **Rolling Gait**   |                     |                |                                             |               |                                                                                        |
 |  **Crawler Gait**   | Snake_Robot_o30.xml |       Y        | [CrawlerGait_zh.py](./codes/CrawlerGait.py) |       Y       | [2016](./references/2016_Gait_Design_of_A_Snake_Robot_by_Connecting_Simple_Shapes.pdf) |
 |  **S-Pedal Gait**   |                     |                |                                             |               |                                                                                        |
+
+
+## Contact Me😊
+Email: xjxf0923@gmail.com 3332407087@qq.com
+
+WeChat: xjxf0923
