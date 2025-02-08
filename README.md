@@ -12,7 +12,7 @@ Includes MuJoCo models, references, bilingual code files in Chinese and English,
 | **Serpentine Gait** |                     |                |                                             |               |                                                                                        |
 |  **Inchworm Gait**  |                     |                |                                             |               |                                                                                        |
 |  **Rolling Gait**   |                     |                |                                             |               |                                                                                        |
-|  **Crawler Gait**   | Snake_Robot_o30.xml |       Y        | [CrawlerGait_zh.py](./codes/CrawlerGait.py) |       Y       | [2016](./references/2016_Gait_Design_of_A_Snake_Robot_by_Connecting_Simple_Shapes.pdf) |
+|  **Crawler Gait**   | Snake_Robot_o30.xml |       Y        | [CrawlerGait.py](./codes/CrawlerGait.py) |       Y       | [2016](./references/2016_Gait_Design_of_A_Snake_Robot_by_Connecting_Simple_Shapes.pdf) |
 |  **S-Pedal Gait**   |                     |                |                                             |               |                                                                                        |
 
 

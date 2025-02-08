@@ -1,7 +1,7 @@
 # 蛇形机器人步态
 
 ### 介绍
-使用MuJoCo开源物理引擎，仿真实现蛇形机器人各种步态。
+使用MuJoCo开源物理引擎，仿真实现蛇形机器人各种步态。<font color=red size=4>注意: 某些浏览器下述公式无法正常显示。读者可阅读[**pdf版本**](README_zh.pdf)或通过Pycharm或Visual Studio Code等编辑器安装Markdown插件查看.</font>
 
 ### 特色😆
 包含MuJoCo模型、参考文献、中英文双语代码文件、中英文双语README.md文件、步态讲解和前置基础知识说明等。[English version of README.md](./README.md)
@@ -24,7 +24,7 @@
   - Pycharm
 > 1. 笔者的环境配置见**environment.yaml**。安装Anaconda后，可通过命令``conda env create -f environment.yaml``复现环境
 > 
-> 2单独安装MuJoCo，使用命令``pip install mujoco``
+> 2. 单独安装MuJoCo，使用命令``pip install mujoco``
 
 
 ### 内容详解
@@ -45,7 +45,12 @@ x(s)=\int_0^scos(\xi_\sigma)d\sigma,\ \ \ \ y(s)=\int_0^ssin(\xi_\sigma)d\sigma,
 $$
 其中a、b、c为标量，s为弧长（表示从原点到该点的曲线长度），则称该曲线为一条Serpenoid曲线。
 
-参数a决定了曲线的波动程度，参数b决定了单位长度内的周期数，参数c决定了宏观的圆形形状。
+参数a决定了曲线的波动程度，参数b决定了单位长度内的周期数，参数c决定了宏观的圆形形状。可视化如下图所示。[可视化代码](./codes/Serpentine_Curve_Params_zh.m)
+<figure>
+<img src="./images/Serpentine_Curve_Params_a.png" width=300 title="Params a"/>
+<img src="./images/Serpentine_Curve_Params_b.png" width=300 title="Params b"/>
+<img src="./images/Serpentine_Curve_Params_c.png" width=300 title="Params c"/>
+</figure>
 
 文献[1]：Serpenoid曲线的曲率是个正弦曲线函数，可得
 $$
@@ -132,7 +137,6 @@ $$
 \phi_i(t)=\alpha sin(\omega t+(i-1)\beta)+\gamma,\ \ \ \ (i=1,...,n-1)
 $$
 -------------
-> 后续内容：对文献[2]中
 
 
 
