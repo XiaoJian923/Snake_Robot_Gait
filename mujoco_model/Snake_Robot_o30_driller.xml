@@ -19,8 +19,8 @@
 
         <hfield name="terrain" ncol="201" nrow="201" size="30 30 5 .1"/>
 
-        <mesh name="head_link" file="./asset/c_head.stl"/>
-<!--        <mesh name="head_link" file="./asset/headofsnake.STL" scale="0.001 0.001 0.001"/>-->
+<!--        <mesh name="head_link" file="./asset/c_head.stl"/>-->
+        <mesh name="head_link" file="./asset/headofsnake.STL" scale="0.001 0.001 0.001"/>
         <mesh name="v_link" file="./asset/c_link_V.stl"/>
         <mesh name="h_link" file="./asset/c_link_H.stl"/>
         <mesh name="tail_link" file="./asset/c_tail.stl"/>
@@ -28,6 +28,10 @@
     </asset>
 
     <worldbody>
+
+<!--        <body name="dirller" pos="0 0 0" euler="0 0 0">-->
+<!--            <geom type="mesh" mesh="drill" mass="0.2" condim="6" friction="0.5 0.15 0.015" rgba="0.5 0.2 0.4 1"/>-->
+<!--        </body>-->
 
         <geom name="floor" pos="0 0 0" size="0 0 .25" type="plane" material="matplane" condim="6" friction="0.5 0.1 0.01"/>
 

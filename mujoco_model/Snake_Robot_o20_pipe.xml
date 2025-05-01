@@ -1,7 +1,9 @@
-<!-- © 2022 Bongsub Song <doorebong@gmail.com> -->
-<!-- All right reserved -->
-<!-- Description : BRM snake robot Mujoco simulation xml -->
-<!-- v20220830 : Circular frame version -->
+<!--# 用下述代码生成空心管道pipe-->
+<!--import math-->
+<!--r = 0.1-->
+<!--rad = 57.2957795-->
+<!--for i in range(0, 361, 20):-->
+<!--    print("%+.3f" % (math.cos(math.radians(i)) * r), "%+.3f" % (math.sin(math.radians(i)) * r), "%+.3f" % 0)-->
 
 <mujoco model="snake-dgist">
 
@@ -20,20 +22,51 @@
         <hfield name="terrain" ncol="201" nrow="201" size="30 30 5 .1"/>
 
         <mesh name="head_link" file="./asset/c_head.stl"/>
-<!--        <mesh name="head_link" file="./asset/headofsnake.STL" scale="0.001 0.001 0.001"/>-->
         <mesh name="v_link" file="./asset/c_link_V.stl"/>
         <mesh name="h_link" file="./asset/c_link_H.stl"/>
         <mesh name="tail_link" file="./asset/c_tail.stl"/>
-<!--        <mesh name="drill" file="./asset/headofsnake.STL" scale="0.001 0.001 0.001"/>&ndash;&gt;-->
+        <mesh name="PipeEmpty" file="./asset/Pipe-100mm-3T_low.stl" scale="2 2 2"/>
+<!--        <mesh name="PipeEmpty" file="./asset/PipeEmptyXJ.STL"/>-->
     </asset>
 
     <worldbody>
+<body name="hollow_cylinder" pos="0.3 0 0.1" euler="0 90 0">拼凑出一个空心管道
+      <geom name="cylinder00" pos="+0.100 +0.000 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder01" pos="+0.094 +0.034 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder02" pos="+0.077 +0.064 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder03" pos="+0.050 +0.087 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder04" pos="+0.017 +0.098 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder05" pos="-0.017 +0.098 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder06" pos="-0.050 +0.087 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder07" pos="-0.077 +0.064 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder08" pos="-0.094 +0.034 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder09" pos="-0.100 +0.000 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder10" pos="-0.094 -0.034 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder11" pos="-0.077 -0.064 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder12" pos="-0.050 -0.087 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder13" pos="-0.017 -0.098 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder14" pos="+0.017 -0.098 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder15" pos="+0.050 -0.087 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder16" pos="+0.077 -0.064 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder17" pos="+0.094 -0.034 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+      <geom name="cylinder18" pos="+0.100 -0.000 +0.000" type="cylinder" size="0.03 2" rgba="0.2 0.6 0.8 0.4"/>
+<!--      <geom name="cylinder19" pos="" type="cylinder" size="0.2 1" rgba="0.2 0.6 0.8 1"/>-->
+<!--      <geom name="cylinder20" pos="" type="cylinder" size="0.2 1" rgba="0.2 0.6 0.8 1"/>-->
+<!--      <geom name="cylinder21" pos="" type="cylinder" size="0.2 1" rgba="0.2 0.6 0.8 1"/>-->
+<!--      <geom name="cylinder22" pos="" type="cylinder" size="0.2 1" rgba="0.2 0.6 0.8 1"/>-->
+<!--      <geom name="cylinder23" pos="" type="cylinder" size="0.2 1" rgba="0.2 0.6 0.8 1"/>-->
+<!--      <geom name="cylinder24" pos="" type="cylinder" size="0.2 1" rgba="0.2 0.6 0.8 1"/>-->
+    </body>
 
-        <geom name="floor" pos="0 0 0" size="0 0 .25" type="plane" material="matplane" condim="6" friction="0.5 0.1 0.01"/>
+        <body name="pipe_v" pos="-0.5 -0.18 0" euler="0 0 0">
+            <geom name="pipe" type="cylinder" size="0.1 2.5" rgba=".5 .5 1 1" friction="2 0.1 0.01"/>
+        </body>
+
+        <geom name="floor" pos="0 0 0" size="0 0 .25" type="plane" material="matplane" condim="6" friction="0.25 0.1 0.01"/>
 
         <light directional="false" diffuse="1 1 1" specular="0 0 0" pos="0 0 15" dir="0 0 -1" castshadow="false"/>
 
-        <body name="head" pos="0 0 0.033" euler="0 90 -90"> 
+        <body name="head" pos="0 0 0.083" euler="0 90 -90">pos="0 0 0.033"
             <site name="s_head" pos="0 0 0.0295" euler="90 0 90"/>
             <freejoint name="root"/>    
             <geom type="mesh" mesh="head_link" mass="0.2" condim="6" friction="0.5 0.15 0.015"/>
@@ -133,7 +166,7 @@
             <joint name="joint19" type="hinge" pos="0 0 0.0685" axis="1 0 0" limited="true" range="-90 90" damping="0.6" armature="0.01" />
             <geom type="mesh" mesh="h_link" mass="0.2" condim="6" friction="0.5 0.15 0.015"/>
 
-        <body name="link20" pos="0  0 -0.0675" euler="0 0 -180">
+        <!-- <body name="link20" pos="0  0 -0.0675" euler="0 0 -180">
             <site name="s_link20" pos="0 0 0.0295" euler="90 0 90"/>
             <joint name="joint20" type="hinge" pos="0 0 0.0685" axis="0 -1 0" limited="true" range="-90 90" damping="0.6" armature="0.01" />
             <geom type="mesh" mesh="v_link" mass="0.2" condim="6" friction="0.5 0.15 0.015"/>
@@ -181,16 +214,17 @@
         <body name="link29" pos="0  0 -0.0695" euler="0 0 -180">
             <site name="s_link29" pos="0 0 0.0295" euler="-90 0 -90"/>
             <joint name="joint29" type="hinge" pos="0 0 0.0685" axis="1 0 0" limited="true" range="-90 90" damping="0.6" armature="0.01" />
-            <geom type="mesh" mesh="h_link" mass="0.2" condim="6" friction="0.5 0.15 0.015"/>
+            <geom type="mesh" mesh="h_link" mass="0.2" condim="6" friction="0.5 0.15 0.015"/> -->
 
         <body name="tail" pos="0  0 -0.0675" euler="0 0 -180">
             <site name="s_tail" pos="0 0 0.0295" euler="90 0 90"/>
-            <joint name="joint30" type="hinge" pos="0 0 0.0685" axis="0 -1 0" limited="true" range="-90 90" damping="0.6" armature="0.01" />
+            <joint name="joint20" type="hinge" pos="0 0 0.0685" axis="0 -1 0" limited="true" range="-90 90" damping="0.6" armature="0.01" />
             <geom type="mesh" mesh="tail_link" mass="0.2" condim="6" friction="0.5 0.15 0.015"/>
 
         </body>
         </body>
         </body>
+        <!-- </body>
         </body>
         </body>
         </body>
@@ -199,8 +233,7 @@
         </body>
         </body>
         </body>
-        </body>
-        </body>
+        </body> -->
         </body>    
         </body>    
         </body>
@@ -242,7 +275,7 @@
         <position name="servo_18" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint18" kp="4"/>
         <position name="servo_19" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint19" kp="4"/>
         <position name="servo_20" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint20" kp="4"/>
-        <position name="servo_21" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint21" kp="4"/>
+        <!-- <position name="servo_21" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint21" kp="4"/>
         <position name="servo_22" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint22" kp="4"/>
         <position name="servo_23" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint23" kp="4"/>
         <position name="servo_24" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint24" kp="4"/>
@@ -251,7 +284,7 @@
         <position name="servo_27" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint27" kp="4"/>
         <position name="servo_28" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint28" kp="4"/>
         <position name="servo_29" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint29" kp="4"/>
-        <position name="servo_30" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint30" kp="4"/>
+        <position name="servo_30" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-3.0 3.0" gear="1" joint="joint30" kp="4"/> -->
     </actuator>
 
     <sensor>
@@ -280,7 +313,7 @@
         <jointpos name="pos_joint18" joint="joint18"/>
         <jointpos name="pos_joint19" joint="joint19"/>
         <jointpos name="pos_joint20" joint="joint20"/>
-        <jointpos name="pos_joint21" joint="joint21"/>
+        <!-- <jointpos name="pos_joint21" joint="joint21"/>
         <jointpos name="pos_joint22" joint="joint22"/>
         <jointpos name="pos_joint23" joint="joint23"/>
         <jointpos name="pos_joint24" joint="joint24"/>
@@ -289,7 +322,7 @@
         <jointpos name="pos_joint27" joint="joint27"/>
         <jointpos name="pos_joint28" joint="joint28"/>
         <jointpos name="pos_joint29" joint="joint29"/>
-        <jointpos name="pos_joint30" joint="joint30"/>
+        <jointpos name="pos_joint30" joint="joint30"/> -->
 
         <!-- index 20 - 33 -->
         <actuatorvel name="vel_joint1" actuator="servo_1"/>
@@ -312,7 +345,7 @@
         <actuatorvel name="vel_joint18" actuator="servo_18"/>
         <actuatorvel name="vel_joint19" actuator="servo_19"/>
         <actuatorvel name="vel_joint20" actuator="servo_20"/>
-        <actuatorvel name="vel_joint21" actuator="servo_21"/>
+        <!-- <actuatorvel name="vel_joint21" actuator="servo_21"/>
         <actuatorvel name="vel_joint22" actuator="servo_22"/>
         <actuatorvel name="vel_joint23" actuator="servo_23"/>
         <actuatorvel name="vel_joint24" actuator="servo_24"/>
@@ -321,7 +354,7 @@
         <actuatorvel name="vel_joint27" actuator="servo_27"/>
         <actuatorvel name="vel_joint28" actuator="servo_28"/>
         <actuatorvel name="vel_joint29" actuator="servo_29"/>
-        <actuatorvel name="vel_joint30" actuator="servo_30"/>
+        <actuatorvel name="vel_joint30" actuator="servo_30"/> -->
 
         <!-- index 34 - 47 -->
         <actuatorfrc name="torque_joint1" actuator="servo_1"/>
@@ -344,7 +377,7 @@
         <actuatorfrc name="torque_joint18" actuator="servo_18"/>
         <actuatorfrc name="torque_joint19" actuator="servo_19"/>
         <actuatorfrc name="torque_joint20" actuator="servo_20"/>
-        <actuatorfrc name="torque_joint21" actuator="servo_21"/>
+        <!-- <actuatorfrc name="torque_joint21" actuator="servo_21"/>
         <actuatorfrc name="torque_joint22" actuator="servo_22"/>
         <actuatorfrc name="torque_joint23" actuator="servo_23"/>
         <actuatorfrc name="torque_joint24" actuator="servo_24"/>
@@ -353,7 +386,7 @@
         <actuatorfrc name="torque_joint27" actuator="servo_27"/>
         <actuatorfrc name="torque_joint28" actuator="servo_28"/>
         <actuatorfrc name="torque_joint29" actuator="servo_29"/>
-        <actuatorfrc name="torque_joint30" actuator="servo_30"/>
+        <actuatorfrc name="torque_joint30" actuator="servo_30"/> -->
 
         <!-- index 48 - 51 -->
         <framequat name="head_quat" objtype="site" objname="s_head"/>
@@ -378,7 +411,7 @@
         <framequat name="link17_quat" objtype="site" objname="s_link17"/>
         <framequat name="link18_quat" objtype="site" objname="s_link18"/>
         <framequat name="link19_quat" objtype="site" objname="s_link19"/>
-        <framequat name="link20_quat" objtype="site" objname="s_link20"/>
+        <!-- <framequat name="link20_quat" objtype="site" objname="s_link20"/>
         <framequat name="link21_quat" objtype="site" objname="s_link21"/>
         <framequat name="link22_quat" objtype="site" objname="s_link22"/>
         <framequat name="link23_quat" objtype="site" objname="s_link23"/>
@@ -387,7 +420,7 @@
         <framequat name="link26_quat" objtype="site" objname="s_link26"/>
         <framequat name="link27_quat" objtype="site" objname="s_link27"/>
         <framequat name="link28_quat" objtype="site" objname="s_link28"/>
-        <framequat name="link29_quat" objtype="site" objname="s_link29"/>
+        <framequat name="link29_quat" objtype="site" objname="s_link29"/> -->
         <framequat name="tail_quat" objtype="site" objname="s_tail"/>
 
     </sensor>
