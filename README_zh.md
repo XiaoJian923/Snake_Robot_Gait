@@ -29,6 +29,7 @@
 ### 准备
 - 知识
   - Python **[必要]**
+  - MuJoCo [b站中文视频教程](https://www.bilibili.com/video/BV1wMdHYVEnx?spm_id_from=333.788.videopod.sections&vd_source=7a02bcb69ff53d02d5749b97cdd79fdc)
   - 微分几何-曲线论 [b站视频课程](https://www.bilibili.com/video/BV1K54y1a7cf/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=7a02bcb69ff53d02d5749b97cdd79fdc) [飞书文档笔记](./materials/Differential_Geometry_Study_Notes_Curve_Theory.pdf)
 - 软件
   - Anaconda
