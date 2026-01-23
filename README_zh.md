@@ -1,36 +1,67 @@
 # 蛇形机器人步态
 
 ### 介绍
-使用MuJoCo开源物理引擎，仿真实现蛇形机器人各种步态。<font color=red size=4>注意: 某些浏览器下述公式无法正常显示。读者可阅读[**pdf版本**](README_zh.pdf)或通过Pycharm或Visual Studio Code等编辑器安装Markdown插件查看.</font>
+使用MuJoCo开源物理引擎，仿真实现蛇形机器人各种步态。<font color=red size=4>注意: 某些浏览器下公式无法正常显示。读者可阅读[**pdf版本**](README_zh.pdf)或通过Pycharm或Visual Studio Code等编辑器安装Markdown插件查看.</font>
 
 笔者编辑软件：PyCharm 2024.2.1 (Community Edition) [PyCharm历史版本](https://www.jetbrains.com/pycharm/download/other.html)
 ### 特色😆
-包含MuJoCo模型、参考文献、中英文双语代码文件、中英文双语README.md文件、步态讲解和前置基础知识说明等。[English version of README.md](./README.md)
+包含MuJoCo模型、参考文献、中文注释的代码文件、步态讲解、前置基础知识说明和对部分论文的修正与补充等。[English version of README.md](./README.md)
 
-### 内容及进度
-|      步态      |         模型          | 模型进度 |                              代码                              | 代码进度 |                                                              参考文献                                                              |
-|:------------:|:-------------------:|:----:|:------------------------------------------------------------:|:----:|:------------------------------------------------------------------------------------------------------------------------------:|
-|   **蜿蜒步态**   | Snake_Robot_o30.xml |  Y   | [Lateral_Undulation_zh.py](./codes/Lateral_Undulation_zh.py) |  Y   |                                                                                                                                |
-|   **行波步态**   | Snake_Robot_o30.xml |  Y   |      [Inchworm_Gait_zh.py](./codes/Inchworm_Gait_zh.py)      |  Y   |                                                                                                                                |
-|   **横滚步态**   | Snake_Robot_o30.xml |  Y   |       [Rolling_Gait_zh.py](./codes/Rolling_Gait_zh.py)       |  Y   |                                                                                                                                |
-|   **侧滑步态**   | Snake_Robot_o14.xml |  Y   |   [Sidewinding_Gait_zh.py](./codes/Sidewinding_Gait_zh.py)   |  Y   |                                                                                                                                |
-|   **履带步态**   | Snake_Robot_o30.xml |  Y   |       [Crawler_Gait_zh.py](./codes/Crawler_Gait_zh.py)       |  Y   |                     [2016](./references/2016_Gait_Design_of_a_Snake_Robot_by_Connecting_Simple_Shapes.pdf)                     |
-|  **履带步态转弯**  |  |  Y   |                                                              |      |    [2018](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)     |
-| **履带步态横滚恢复** |  |  Y   |                                                              |      |    [2018](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)     |
-|  **越过法兰盘**   |                     |  No  |                                                              |      |                     [2016](./references/2016_Gait_Design_of_a_Snake_Robot_by_Connecting_Simple_Shapes.pdf)                     |
-|   **爬梯子**    |                     |  No  |                                                              |      |     [2018](./references/2018_Ladder_Climbing_with_a_Snake_Robot.pdf)      |
-|  **爬竖直杆子**   | Snake_Robot_o20_pole.xml |  Y   |      [Pole_Climbing_zh.py](./codes/Pole_Climbing_zh.py)      |  Y   |                       [2013](./references/2013_Motion_Estimation_of_Snake_Robots_in_Straight_Pipes.pdf)                        |
-|  **爬水平管子**   | Snake_Robot_o20_pipe.xml |  Y   |      [Pipe_Crawling_zh.py](./codes/Pipe_Crawling_zh.py)      |  Y   |                       [2013](./references/2013_Motion_Estimation_of_Snake_Robots_in_Straight_Pipes.pdf)                        |
-|  **S-足波步态**  | Snake_Robot_o30.xml |  Y   |       [S-Pedal_Gait_zh.py](./codes/S-Pedal_Gait_zh.py)       |  Y   |  [2024](./references/2024_A_Unified_Motion_Modeling_Approach_for_Snake_Robots_Gaits_Generated_with_Backbone_Curve_Method.pdf)  |
-|   **圆形足波**   |                     |      |                                                              |      | [2021](./references/2021_Hoop_Passing_Motion_for_a_Snake_Robot_to_Realize_Motion_Transition_Across_Different_Environments.pdf) |
+### 内容
+|      步态       |                                 代码                                 |                                                                                参考文献                                                                            |
+|:-------------:|:------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|   **蜿蜒步态**    |       [Lateral_Undulation.py](./codes/Lateral_Undulation.py)       |                       [2002](./references/2002_Modeling_Analysis_and_Synthesis_of_Serpentine_Locomotion_with_a_Multilink_Robotic_Snake.pdf)                        |
+|   **尺蠖步态**    |                 [Inchworm.py](./codes/Inchworm.py)                 |                                      [2009](./references/2009_Parameterized_and_Scripted_Gaits_for_Modular_Snake_Robots.pdf)                                       |
+|   **弧形尺蠖**    |             [Inchworm_Arc.py](./codes/Inchworm_Arc.py)             |                                      [2009](./references/2009_Parameterized_and_Scripted_Gaits_for_Modular_Snake_Robots.pdf)                                       |
+|   **S形尺蠖**    |               [Inchworm_S.py](./codes/Inchworm_S.py)               |                                      [2009](./references/2009_Parameterized_and_Scripted_Gaits_for_Modular_Snake_Robots.pdf)                                       |
+|   **侧绕步态**    |              [Sidewinding.py](./codes/Sidewinding.py)              |                                     [2009](./references/2009_Parameterized_and_Scripted_Gaits_for_Modular_Snake_Robots.pdf)                                        |
+|  **S形平面横滚**   |                [Rolling_S.py](./codes/Rolling_S.py)                |                       [2009](./references/2009_Generating_Gaits_for_Snake_Robots_by_Annealed_Chain_Fitting_and_Keyframe_Wave_Extraction.pdf)                       |
+|   **爬竖直杆子**   |            [Pole_Climbing.py](./codes/Pole_Climbing.py)            |                                         [2013](./references/2013_Motion_Estimation_of_Snake_Robots_in_Straight_Pipes.pdf)                                          |
+|   **爬水平管子**   |            [Pipe_Crawling.py](./codes/Pipe_Crawling.py)            |                                         [2013](./references/2013_Motion_Estimation_of_Snake_Robots_in_Straight_Pipes.pdf)                                          |
+|   **弧形横滚**    |              [Rolling_Arc.py](./codes/Rolling_Arc.py)              |                                               [2015](./references/2015_Modeling_Rolling_Gaits_of_a_Snake_Robot.pdf)                                                |
+|   **驼峰横滚**    |             [Rolling_Hump.py](./codes/Rolling_Hump.py)             |                                               [2015](./references/2015_Modeling_Rolling_Gaits_of_a_Snake_Robot.pdf)                                                |
+|   **仿鳗步态**    |                 [Eel-like.py](./codes/Eel-like.py)                 |                   [2017](./references/2017_An_Experimental_Investigation_of_Path_Following_for_an_Underwater_Snake_Robot_with_a_Caudal_Fin.pdf)                    |
+|   **螺旋波传递**   |                    [](./codes/Helical_Wave_Propagation.py)                    |                   [2017](./references/2017_Implementation_of_Helical_Wave_Propagation_Motion_in_Snake_Robot_Moving_on_Exterior_of_a_Pipe.pdf)                    |
+|   **履带步态**    |                  [Crawler.py](./codes/Crawler.py)                  |                      [2018](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)                       |
+|  **履带步态转弯**   |     [Crawler_Turning_Form.py](./codes/Crawler_Turning_Form.py)     |                      [2018](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)                       |
+| **履带步态横滚恢复**  | [Crawler_Rolling_Recovery.py](./codes/Crawler_Rolling_Recovery.py) |                      [2018](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)                       |
+|   **越过法兰盘**   |   [Climbing_over_a_Flange.py](./codes/Climbing_over_a_Flange.py)   |                      [2018](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)                       |
+|  **爬竖/斜梯子**   |          [Ladder_Climbing.py](./codes/Ladder_Climbing.py)          |                                                  [2018](./references/2018_Ladder_Climbing_with_a_Snake_Robot.pdf)                                                  |
+|  **C-足波步态**   |                  [C-Pedal.py](./codes/C-Pedal.py)                  |                   [2021](./references/2021_Hoop_Passing_Motion_for_a_Snake_Robot_to_Realize_Motion_Transition_Across_Different_Environments.pdf)                   |
+|  **C2-足波步态**  |                      [](./codes/C2-Pedal.py)                       |                                                       [2023](./references/2023_面向灾后环境的蛇形机器人重构设计及运动控制研究.pdf)                                          |
+|  **R-履带步态**   |                [R-Crawler.py](./codes/R-Crawler.py)                |                        [2023](./references/2023_Extension_and_Experimental_Demonstration_of_Gait_Transition_Network_for_a_Snake_Robot.pdf)                         |
+|  **H-履带步态**   |                [H-Crawler.py](./codes/H-Crawler.py)                |                        [2023](./references/2023_Extension_and_Experimental_Demonstration_of_Gait_Transition_Network_for_a_Snake_Robot.pdf)                         |
+|  **螺旋伸缩步态**   |                  [](./codes/Helical_Expansion.py)                  |                                                          [2023](./references/2023_蛇形机器人杆件攀爬跨越运动控制研究.pdf)                                        |
+|  **S-足波步态**   |                  [S-Pedal.py](./codes/S-Pedal.py)                  |                    [2024](./references/2024_A_Unified_Motion_Modeling_Approach_for_Snake_Robots_Gaits_Generated_with_Backbone_Curve_Method.pdf)                    |
+|  **S形管上翻滚**   |                  [](./codes/S-Shaped_Rolling.py)                   |            [2024](./references/2024_S-Shaped_Rolling_Gait_Designed_using_Curve_Transformations_of_a_Snake_Robot_for_Climbing_on_a_Bifurcated_Pipe.pdf)             |
+|   **摆荡绕杆**    |                     [](./codes/Swing_Grasp.py)                     | [2025](./references/2025_A_Maneuverable_Winding_Gait_for_Snake_Robots_Based_on_a_Delay-Aware_Swing_and_Grasp_Framework_Combining_Rules_and_Learning_Methods.pdf)  |
+|   **螺旋步态**    |                      [](./codes/Spiraling.py)                      |                               [2025](./references/2025_Novel_Gaits_for_Snake_Robot_Navigation_in_Complex_External_Pipe_Networks.pdf)                               |
+| **窗口化滚动螺旋步态** |               [](./codes/Windowed_Rolling_Helix.py)                |                               [2025](./references/2025_Novel_Gaits_for_Snake_Robot_Navigation_in_Complex_External_Pipe_Networks.pdf)                               |
+|    **...**    |                                                                    |                                                                                                                                                                    |
+
+
+### 论文修正与补充✨
+- 2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration
+  - 第4页，图的编号有误;
+  - 第4页，表2中最下面三行的扭转角应为- (pi / 2);
+  - 在此补充爬法兰步态的Case B的示意图[Climbing_over_a_Flange_CaseB](./images/Climbing_over_a_Flange_CaseB.png)。
+- 2017_Implementation_of_Helical_Wave_Propagation_Motion_in_Snake_Robot_Moving_on_Exterior_of_a_Pipe
+- 2018_Helical_Wave_Propagation_Motion_for_a_Snake_Robot_on_a_Vertical_Pipe_Containing_a_Branch
+  - 上述两篇文献作者相同，研究内容高度相似，2018年的公式推到更详细，但公式均存在图不对文情况。遇到去看2006年[文献](./references/2006_Study_on_the_3D_Shape_of_Active_Cord_Mechanism.pdf)即可。
+- 2018_Ladder_Climbing_with_a_Snake_Robot
+  - 第3页，公式9，倒数第二个等号应为≤。
+- 2021_Hoop_Passing_Motion_for_a_Snake_Robot_to_Realize_Motion_Transition_Across_Different_Environments
+  - 第7页，公式15，不应是2倍的关系。
 
 
 
-### 准备
+### 准备🦐
 - 知识
   - Python **[必要]**
   - MuJoCo [b站中文视频教程](https://www.bilibili.com/video/BV1wMdHYVEnx?spm_id_from=333.788.videopod.sections&vd_source=7a02bcb69ff53d02d5749b97cdd79fdc)
-  - 微分几何-曲线论 [b站视频课程](https://www.bilibili.com/video/BV1K54y1a7cf/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=7a02bcb69ff53d02d5749b97cdd79fdc) [飞书文档笔记](./materials/Differential_Geometry_Study_Notes_Curve_Theory.pdf)
+  - 微分几何-曲线论 [b站视频课程](https://www.bilibili.com/video/BV1K54y1a7cf/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=7a02bcb69ff53d02d5749b97cdd79fdc) [飞书文档笔记](./materials/Differential_Geometry_Study_Notes_Curve_Theory.pdf) [b站视频-弗雷内公式的几何理解](https://www.bilibili.com/video/BV1zT421U794?vd_source=7a02bcb69ff53d02d5749b97cdd79fdc&spm_id_from=333.788.videopod.sections)
+  - 骨干曲线法 （结合[2006年文献](./references/2006_Study_on_the_3D_Shape_of_Active_Cord_Mechanism.pdf)、[2017年文献](./references/2017_Implementation_of_Helical_Wave_Propagation_Motion_in_Snake_Robot_Moving_on_Exterior_of_a_Pipe.pdf)和[2018年文献](./references/2018_Helical_Wave_Propagation_Motion_for_a_Snake_Robot_on_a_Vertical_Pipe_Containing_a_Branch.pdf)，可彻底理解掌握该方法）
+  - 曲线段拼接法 [2018年TRO文献](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)（结合微分几何-曲线论、骨干曲线法，可彻底理解掌握该方法）
 - 软件
   - Anaconda
   - Pycharm
@@ -39,7 +70,7 @@
 > 2. 单独安装MuJoCo，使用命令``pip install mujoco``
 
 
-### 内容详解
+### 内容详解🦘
 - **蜿蜒步态**
 > 前置基础知识：初等数学（三角函数）、微积分（尤其定积分的定义）和微分几何（曲线弧长参数、曲线曲率）。
 
@@ -47,7 +78,7 @@
 
 [2] Saito M, Fukaya M, Iwasaki T. Modeling, Analysis, and Synthesis of Serpentine Locomotion with a Multilink Robotic Snake[J]. IEEE control systems magazine, 2002, 22(1): 64-81.
 **************
->下述内容参考自文献[2]，文献[2]又参考自文献[1]。笔者未能找到文献[1]的电子版与纸质版😭
+>下述内容参考自文献[2]，文献[2]又参考自文献[1]。若需要文献[1]的电子版可联系笔者。
 
 ***Serpenoid Curve***
 
@@ -107,7 +138,7 @@ $$
 x(s)=\int_0^scos\theta(\tau)d\tau,\ \ \ \ y(s)=\int_0^ssin\theta(\tau)d\tau
 $$
 这与$(1.1)$的坐标公式相一致。
-> 上述内容可加深对Serpenoid曲线的理解，<font color=red>但假设$\kappa(s)$为正弦曲线的理由</font>还需要进一步阅读论文 **[1]**。
+> 上述内容可加深对Serpenoid曲线的理解，<font color=red>但假设$\kappa(s)$为正弦曲线的理由</font>还需要进一步阅读文献 **[1]**。
 > 
 > 下述内容给出$n-1$个关节（joints），$n$个片段（links, segments），$n+1$个点（points）的蛇形机器人对Serppenoid曲线的近似 **（离散化）**。
 
@@ -154,19 +185,22 @@ $$
 \phi_i(t)=\alpha sin(\omega t+(i-1)\beta)+\gamma,\ \ \ \ (i=1,...,n-1)
 $$
 -------------
-- **行波步态** 
-可视为沿蛇身偏转90度的蜿蜒步态
+- **尺蠖步态** 
+
+亦称行波（Inchworm）步态，可视为蛇身偏转90度的蜿蜒步态。
+
 -------------
-- **横滚步态**
-$$
-\phi_i(t)=
-\begin{cases}
-\alpha_1 sin(\omega_1 t)  & (i:odd) \\
-\alpha_2 sin(\omega_2 t+\lambda)  & (i:even) 
-\end{cases}
-$$
+- **弧形尺蠖** 
+
+尺蠖步态基础上，偏航关节给非零值，使其稳定不易倾斜，可实现转弯运动。
+
 -------------
-- **侧滑步态**
+- **S形尺蠖**
+
+尺蠖步态基础上，偏航关节前后给相反非零值，使其稳定不易倾斜，可实现直线运动。
+
+-------------
+- **侧绕步态**
 $$
 \phi_i(t)=
 \begin{cases}
@@ -175,46 +209,18 @@ $$
 \end{cases}
 $$
 -------------
-- **履带步态**
-> 前置基础知识：微分几何-曲线论（Frenet-Serret Frame）。
-
-[1] Takemori T, Tanaka M, Matsuno F. Gait Design of a Snake Robot by Connecting Simple Shapes[C]//2016 IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR). IEEE, 2016: 189-194.
-
-[2] Takemori T, Tanaka M, Matsuno F. Gait Design for a Snake Robot by Connecting Curve Segments and Experimental Demonstration[J]. IEEE Transactions on Robotics, 2018, 34(5): 1384-1391.
-**************
-
-- **履带步态转弯**
-> 前置基础知识：履带步态。
-
-[1] Takemori T, Tanaka M, Matsuno F. Gait Design for a Snake Robot by Connecting Curve Segments and Experimental Demonstration[J]. IEEE Transactions on Robotics, 2018, 34(5): 1384-1391.
-
-
-- **履带步态横滚恢复**
-> 前置基础知识：履带步态。
-
-[1] Takemori T, Tanaka M, Matsuno F. Gait Design for a Snake Robot by Connecting Curve Segments and Experimental Demonstration[J]. IEEE Transactions on Robotics, 2018, 34(5): 1384-1391.
-
-
-- **越过法兰盘**
-> 前置基础知识：微分几何-曲线论（Frenet-Serret Frame）。
-
-[1] Takemori T, Tanaka M, Matsuno F. Gait Design of a Snake Robot by Connecting Simple Shapes[C]//2016 IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR). IEEE, 2016: 189-194.
-
-[2] Takemori T, Tanaka M, Matsuno F. Gait Design for a Snake Robot by Connecting Curve Segments and Experimental Demonstration[J]. IEEE Transactions on Robotics, 2018, 34(5): 1384-1391.
-
-
-
-- **爬梯子**
-> 前置基础知识：微分几何-曲线论（Frenet-Serret Frame）。
-
-[1] Takemori T, Tanaka M, Matsuno F. Ladder Climbing with a Snake Robot[C]//2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2018: 1-9.
-
-
+- **S形平面横滚** 
+$$
+\phi_i(t)=
+\begin{cases}
+\alpha_1 sin(\Omega_1 i+ \delta_1)sin(\omega_1t)  & (i:odd) \\
+\alpha_2 sin(\Omega_2 i+ \delta_2)sin(\omega_2t + \delta)  & (i:even) 
+\end{cases}
+$$
+-------------
 - **爬竖直杆子**
 
-[1] Enner F, Rollinson D, Choset H. Motion Estimation of Snake Robots in Straight Pipes[C]//2013 IEEE International Conference on Robotics and Automation. IEEE, 2013: 5168-5173.
-
-v较小时可通过夹持管道外壁实现爬杆子
+v较小时可通过夹持管道外壁实现爬杆子。
 $$
 \phi_i(t)=
 \begin{cases}
@@ -222,13 +228,10 @@ A sin(\omega t+v i)  & (i:odd) \\
 A sin(\omega t+v i+\frac{\pi}{2})  & (i:even) 
 \end{cases}
 $$
-
-
+-------------
 - **爬水平管子**
 
-[1] Enner F, Rollinson D, Choset H. Motion Estimation of Snake Robots in Straight Pipes[C]//2013 IEEE International Conference on Robotics and Automation. IEEE, 2013: 5168-5173.
-
-v较大时可通过支撑管道内壁实现爬管子
+v较大时可通过挤压管道内壁实现爬管子。
 $$
 \phi_i(t)=
 \begin{cases}
@@ -236,21 +239,96 @@ A sin(\omega t+v i)  & (i:odd) \\
 A sin(\omega t+v i+\frac{\pi}{2})  & (i:even) 
 \end{cases}
 $$
+-------------
+- **弧形横滚**
+$$
+\phi_i(t)=
+\begin{cases}
+\alpha_1 sin(\omega_1 t)  & (i:odd) \\
+\alpha_2 sin(\omega_2 t+\lambda)  & (i:even) 
+\end{cases}
+$$
+-------------
+- **驼峰横滚**
+> 前置基础知识：骨干曲线法。
 
+形式上相当于弧形横滚的中部局部抬起，可用于过障碍物。
+
+-------------
+- **仿鳗步态**
+
+形式上相当于蜿蜒步态的变种，从蛇头到蛇尾，关节摆动幅度依次增大。
+$$
+\phi_i(t)=\alpha (n-i)/(n+1)sin(\omega t+(i-1)\beta)+\gamma,\ \ \ \ (i=1,...,n-1)
+$$
+-------------
+- **螺旋波传递**
+> 前置基础知识：骨干曲线法。
+
+项目未给出实现，若有幸发出论文后，则开源相关代码😆。
+
+-------------
+- **履带步态**
+> 前置基础知识：曲线段拼接法。
+**************
+- **履带步态转弯**
+> 前置基础知识：履带步态。
+**************
+- **履带步态横滚恢复**
+> 前置基础知识：履带步态。
+**************
+- **越过法兰盘**
+> 前置基础知识：曲线段拼接法。
+
+若有幸发出论文后，给出笔者对本步态的讨论😆。
+**************
+- **爬竖/斜梯子**
+> 前置基础知识：曲线段拼接法。
+
+本步态很不稳定。
+**************
+- **C-足波步态**
+> 前置基础知识：曲线段拼接法。
+**************
+- **C2-足波步态**
+> 前置基础知识：曲线段拼接法。
+
+项目未给出实现。闲暇时实现。
+**************
+- **R-履带步态**
+> 前置基础知识：履带步态。
+**************
+- **H-履带步态**
+> 前置基础知识：履带步态。
+**************
+- **螺旋伸缩步态**
+> 前置基础知识：曲线段拼接法。
+
+项目未给出实现。闲暇时实现。
+**************
 - **S-足波步态**
-> 前置基础知识：微分几何-曲线论（Frenet-Serret Frame）。
+> 前置基础知识：曲线段拼接法。
 
+已用两种方法实现S-足波步态的转弯。其中一种不是笔者的思路，不方便给出。另外一种，正计划做相关实验。若有幸发出论文后，则开源相关代码😆。
+**************
+- **S形管上翻滚**
+> 前置基础知识：曲线段拼接法。
 
-- **圆形足波**
-> 前置基础知识：微分几何-曲线论（Frenet-Serret Frame）。
+无复现该步态的打算。
+**************
+- **摆荡步态**
+> 前置基础知识：强化学习。
 
-[1] Takemori T, Tanaka M, Matsuno F. Hoop-passing Motion for a Snake Robot to Realize Motion Transition across Different Environments[J]. IEEE Transactions on Robotics, 2021, 37(5): 1696-1711.
+目前笔者未考虑强化学习。若后续考虑强化学习，则考虑复现。
+**************
+- **螺旋步态**
 
+项目未给出实现。闲暇时实现。
+**************
+- **窗口化滚动螺旋步态**
 
-
-
-
-
+项目未给出实现。闲暇时实现。
+**************
 
 
 ## 联系我😊
