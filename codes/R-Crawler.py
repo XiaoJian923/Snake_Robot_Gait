@@ -22,7 +22,7 @@ d = 180     # 履带距离
 r_c = math.sqrt(h ** 2 + (w / 2) ** 2) / 2  # 圆弧半径，由勾股定理可得
 alpha = 2 * math.atan(w / (2 * h))          # 圆弧之间扭转角
 
-Psi_array = [0, alpha, alpha]
+Psi_array = [alpha, 0, alpha]
 
 l_j = 2 * r_c + d   # 直线长度
 r_j = r_c           # 圆弧半径
