@@ -28,7 +28,7 @@
 |   **越过法兰盘**   |   [Climbing_over_a_Flange.py](./codes/Climbing_over_a_Flange.py)   |                      [2018](./references/2018_Gait_Design_for_a_Snake_Robot_by_Connecting_Curve_Segments_and_Experimental_Demonstration.pdf)                       |
 |  **爬竖/斜梯子**   |          [Ladder_Climbing.py](./codes/Ladder_Climbing.py)          |                                                  [2018](./references/2018_Ladder_Climbing_with_a_Snake_Robot.pdf)                                                  |
 |  **C-足波步态**   |                  [C-Pedal.py](./codes/C-Pedal.py)                  |                   [2021](./references/2021_Hoop_Passing_Motion_for_a_Snake_Robot_to_Realize_Motion_Transition_Across_Different_Environments.pdf)                   |
-|  **C2-足波步态**  |                      [](./codes/C2-Pedal.py)                       |                                                       [2023](./references/2023_面向灾后环境的蛇形机器人重构设计及运动控制研究.pdf)                                          |
+|  **C2-足波步态**  |                      [C2-Pedal.py](./codes/C2-Pedal.py)                       |                                                       [2023](./references/2023_面向灾后环境的蛇形机器人重构设计及运动控制研究.pdf)                                          |
 |  **R-履带步态**   |                [R-Crawler.py](./codes/R-Crawler.py)                |                        [2023](./references/2023_Extension_and_Experimental_Demonstration_of_Gait_Transition_Network_for_a_Snake_Robot.pdf)                         |
 |  **H-履带步态**   |                [H-Crawler.py](./codes/H-Crawler.py)                |                        [2023](./references/2023_Extension_and_Experimental_Demonstration_of_Gait_Transition_Network_for_a_Snake_Robot.pdf)                         |
 |  **螺旋伸缩步态**   |                  [](./codes/Helical_Expansion.py)                  |                                                          [2023](./references/2023_蛇形机器人杆件攀爬跨越运动控制研究.pdf)                                        |
@@ -293,7 +293,7 @@ $$
 - **C2-足波步态**
 > 前置基础知识：曲线段拼接法。
 
-项目未给出实现。闲暇时实现。
+此步态在构型上与S-Pedal步态等价。
 **************
 - **R-履带步态**
 > 前置基础知识：履带步态。
