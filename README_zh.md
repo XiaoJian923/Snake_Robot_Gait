@@ -336,6 +336,8 @@ $$
 
 微信: xjxf0923
 
+笔者简介：INFJ-A，98年男，2025级博士研究生。通过本项目，期望可以对本领域新手有所帮助。
+
 ***
 > markdown语法 https://markdown.com.cn/basic-syntax/
 > 
