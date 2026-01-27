@@ -52,6 +52,12 @@
   - 第3页，公式9，倒数第二个等号应为≤。
 - 2021_Hoop_Passing_Motion_for_a_Snake_Robot_to_Realize_Motion_Transition_Across_Different_Environments
   - 第7页，公式15，不应是2倍的关系。
+- 2024_A_Unified_Motion_Modeling_Approach_for_Snake_Robots_Gaits_Generated_with_Backbone_Curve_Method
+  - 第5页，公式7，笔者理解是$$W_G = 2r_1cos\frac{\beta}{2} + 2r_2sin\frac{\beta}{2}$$
+  - 第6页，公式9，笔者理解是（理解可能有误）$$\textbf{d}_{curve} = \Delta\textbf{s}_h + \textbf{d}_{slip}$$
+  - 第7页，公式16，笔者理解是$$\phi = arccos(\frac{\textbf{d}_{curve}\cdot\textbf{e}_x}{|\textbf{d}_{curve}|})$$
+  - 第10页，实验A，首段第4行，β=1.287。
+  - 第11页，实验B，Y方向上机器人的移动距离为负。
 
 
 
