@@ -3,7 +3,7 @@
 参考文献：2025 Novel Gaits for Snake Robot Navigation in Complex External Pipe Networks
 MuJoCo模型参考：https://github.com/VanguardDream/snake_RL
 作者：肖剑0923
-时间：20260128
+时间：20260129
 '''
 import time
 import math
@@ -11,7 +11,7 @@ import mujoco
 import numpy as np
 import mujoco.viewer
 
-N = 20              # 关节数
+N = 20              # 关节数不能太大
 A = 1.23
 omega_t = 4.5
 omega_s = 0.11
