@@ -42,7 +42,7 @@
 
 ### 论文复现内容
 - 2024_A_Unified_Motion_Modeling_Approach_for_Snake_Robots_Gaits_Generated_with_Backbone_Curve_Method
-  - 利用运动模型做运动预测
+  - 利用运动模型做运动预测 [code](./replication_materials/2024_A_Unified_Motion_Modeling_Approach_for_Snake_Robots_Gaits_Generated_with_Backbone_Curve_Method/The_Predicted_Trajectory_Fig_18.py)
 
 
 ### 论文修正与补充✨
