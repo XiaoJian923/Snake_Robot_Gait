@@ -32,6 +32,7 @@
 |  **R-履带步态**   |                [R-Crawler.py](./codes/R-Crawler.py)                |                       [2023](./references/2023_Extension_and_Experimental_Demonstration_of_Gait_Transition_Network_for_a_Snake_Robot.pdf)                        |
 |  **H-履带步态**   |                [H-Crawler.py](./codes/H-Crawler.py)                |                       [2023](./references/2023_Extension_and_Experimental_Demonstration_of_Gait_Transition_Network_for_a_Snake_Robot.pdf)                        |
 |  **螺旋伸缩步态**   |                  [](./codes/Helical_Expansion.py)                  |                                                         [2023](./references/2023_蛇形机器人杆件攀爬跨越运动控制研究.pdf)                                                          |
+|  **锥形螺旋步态**   |                  [](./codes/Helical_Expansion.py)                  |                                                           [2010](./references/2010_A_Snake_Robot_Propelling_Inside_of_A_Pipe_with_Helical_Rolling_Motion.pdf) [2024](./references/2024_Multi-gait_Snake_Robot_for_Inspecting_Inner_Wall_of_a_Pipeline.pdf)                                                            |
 |  **S-足波步态**   |                  [S-Pedal.py](./codes/S-Pedal.py)                  |                   [2024](./references/2024_A_Unified_Motion_Modeling_Approach_for_Snake_Robots_Gaits_Generated_with_Backbone_Curve_Method.pdf)                   |
 |  **S形管上翻滚**   |                  [](./codes/S-Shaped_Rolling.py)                   |           [2024](./references/2024_S-Shaped_Rolling_Gait_Designed_using_Curve_Transformations_of_a_Snake_Robot_for_Climbing_on_a_Bifurcated_Pipe.pdf)            |
 |   **摆荡绕杆**    |                     [](./codes/Swing_Grasp.py)                     | [2025](./references/2025_A_Maneuverable_Winding_Gait_for_Snake_Robots_Based_on_a_Delay-Aware_Swing_and_Grasp_Framework_Combining_Rules_and_Learning_Methods.pdf) |
@@ -326,6 +327,13 @@ $$
 > 前置基础知识：曲线段拼接法。
 
 项目未给出实现。闲暇时实现。
+**************
+- **锥形螺旋步态**
+> 前置基础知识：曲线段拼接法。
+
+常见的锥形螺旋分为**等角锥形螺旋**和**等距锥形螺旋**。
+
+项目未给出实现。非必要不实现。
 **************
 - **S-足波步态**
 > 前置基础知识：曲线段拼接法。
